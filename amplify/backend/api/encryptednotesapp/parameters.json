@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "encryptednotesapp",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authencryptednotesappfc14d4f8",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

@@ -1,0 +1,196 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateNotebook(
+  $filter: ModelSubscriptionNotebookFilterInput
+  $owner: String
+) {
+  onCreateNotebook(filter: $filter, owner: $owner) {
+    id
+    title
+    Notes {
+      items {
+        id
+        title
+        description
+        user
+        createdAt
+        updatedAt
+        notebookNotesId
+        owner
+      }
+      nextToken
+    }
+    user
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateNotebook(
+  $filter: ModelSubscriptionNotebookFilterInput
+  $owner: String
+) {
+  onUpdateNotebook(filter: $filter, owner: $owner) {
+    id
+    title
+    Notes {
+      items {
+        id
+        title
+        description
+        user
+        createdAt
+        updatedAt
+        notebookNotesId
+        owner
+      }
+      nextToken
+    }
+    user
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteNotebook(
+  $filter: ModelSubscriptionNotebookFilterInput
+  $owner: String
+) {
+  onDeleteNotebook(filter: $filter, owner: $owner) {
+    id
+    title
+    Notes {
+      items {
+        id
+        title
+        description
+        user
+        createdAt
+        updatedAt
+        notebookNotesId
+        owner
+      }
+      nextToken
+    }
+    user
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnCreateNote(
+  $filter: ModelSubscriptionNoteFilterInput
+  $owner: String
+) {
+  onCreateNote(filter: $filter, owner: $owner) {
+    id
+    title
+    description
+    notebook {
+      id
+      title
+      Notes {
+        nextToken
+      }
+      user
+      createdAt
+      updatedAt
+      owner
+    }
+    user
+    createdAt
+    updatedAt
+    notebookNotesId
+    owner
+  }
+}
+subscription OnUpdateNote(
+  $filter: ModelSubscriptionNoteFilterInput
+  $owner: String
+) {
+  onUpdateNote(filter: $filter, owner: $owner) {
+    id
+    title
+    description
+    notebook {
+      id
+      title
+      Notes {
+        nextToken
+      }
+      user
+      createdAt
+      updatedAt
+      owner
+    }
+    user
+    createdAt
+    updatedAt
+    notebookNotesId
+    owner
+  }
+}
+subscription OnDeleteNote(
+  $filter: ModelSubscriptionNoteFilterInput
+  $owner: String
+) {
+  onDeleteNote(filter: $filter, owner: $owner) {
+    id
+    title
+    description
+    notebook {
+      id
+      title
+      Notes {
+        nextToken
+      }
+      user
+      createdAt
+      updatedAt
+      owner
+    }
+    user
+    createdAt
+    updatedAt
+    notebookNotesId
+    owner
+  }
+}
+subscription OnCreateUsers(
+  $filter: ModelSubscriptionUsersFilterInput
+  $owner: String
+) {
+  onCreateUsers(filter: $filter, owner: $owner) {
+    id
+    masterPassword
+    hash
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnUpdateUsers(
+  $filter: ModelSubscriptionUsersFilterInput
+  $owner: String
+) {
+  onUpdateUsers(filter: $filter, owner: $owner) {
+    id
+    masterPassword
+    hash
+    createdAt
+    updatedAt
+    owner
+  }
+}
+subscription OnDeleteUsers(
+  $filter: ModelSubscriptionUsersFilterInput
+  $owner: String
+) {
+  onDeleteUsers(filter: $filter, owner: $owner) {
+    id
+    masterPassword
+    hash
+    createdAt
+    updatedAt
+    owner
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-encryptednotesapp-dev-225132-authRole",
+      "UnauthRoleArn": "arn:aws:iam::865717696384:role/amplify-encryptednotesapp-dev-225132-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::865717696384:role/amplify-encryptednotesapp-dev-225132-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-encryptednotesapp-dev-225132-deployment",
+      "UnauthRoleName": "amplify-encryptednotesapp-dev-225132-unauthRole",
+      "StackName": "amplify-encryptednotesapp-dev-225132",
+      "StackId": "arn:aws:cloudformation:ap-south-1:865717696384:stack/amplify-encryptednotesapp-dev-225132/70b4c120-f5a0-11ed-8d50-0696b4856e22",
+      "AmplifyAppId": "d2x3tngxdz6p9"
+    },
+    "categories": {
+      "auth": {
+        "encryptednotesappfc14d4f8": {}
+      },
+      "api": {
+        "encryptednotesapp": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+<div class="flex flex-col justify-start align-middle">
+  <div class="flex flex-row justify-between text-black">
+    <div>
+      <p class="text-2xl mb-3">Notebooks</p>
+    </div>
+  </div>
+
+  <div
+    class="flex flex-col border border-neutral-700 rounded overflow-y-auto overflow-x-hidden h-[calc(100vh-190px)] snap-y"
+  >
+    <ng-container>
+      <div
+        *ngIf="!createNotebookVisible; else notebookForm"
+        class="flex justify-center border-b border-neutral-700 text-blue-500 p-3 cursor-pointer snap-start active:bg-blue-500/50 hover:underline select-none"
+        (click)="showCreateNotebookForm()"
+      >
+        Create New Notebook
+      </div>
+      <ng-template #notebookForm>
+        <form
+          [formGroup]="createNotebookForm"
+          (ngSubmit)="onCreateNotebook(createNotebookForm.value)"
+        >
+
+          <input
+            type="text"
+            formControlName="title"
+            placeholder="Notebook Name"
+            required
+            (blur)="hideCreateNotebookForm()"
+            class="w-full bg-neutral-200 flex justify-center border-b border-neutral-700 text-black p-3 cursor-pointer snap-start outline-transparent"
+          />
+        </form>
+      </ng-template>
+
+      <div
+        class="flex justify-between border-b border-neutral-700 text-black p-3 hover:bg-blue-500/30 active:bg-blue-500/50 cursor-pointer snap-start"
+        *ngFor="let notebook of notebooks"
+      >
+        <input
+          type="text "
+          class="border-neutral-700 text-black p-3 cursor-pointer snap-start read-only:bg-transparent bg-neutral-200 read-only:outline-none w-min"
+          [readOnly]="true"
+          (click)="onSelectNotebook(notebook)"
+          (dblclick)="notebookTitle.readOnly = false"
+          (submit)="notebookTitle.value = 'Submitted'"
+          (blur)="
+            notebookTitle.readOnly = true;
+            onUpdateNotebook(notebook.id, notebookTitle.value)
+          "
+          value="{{ notebook.title }}"
+          #notebookTitle
+        />
+
+        <div class="self-center">
+          <button class="rounded bg-red-300 hover:bg-red-500 active:bg-red-600 mx-3 p-1">
+            <img
+              src="../../../assets/trash.png"
+              height="25px"
+              width="25px"
+              class="self-center"
+              (click)="onDeleteNotebook(notebook.id)"
+            />
+          </button>
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #emptyTemplate>
+      <div class="flex justify-center items-center h-full">
+        <p class="text-2xl text-black">No Notes Found!</p>
+      </div>
+    </ng-template>
+  </div>
+</div>

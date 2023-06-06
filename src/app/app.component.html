@@ -1,0 +1,41 @@
+<amplify-authenticator>
+  <ng-template
+    amplifySlot="authenticated"
+    let-user="user"
+    let-signOut="signOut"
+  >
+    <header class="bg-blue-500 mx-auto flex justify-between p-4">
+      <h1 class="text-black font-bold text-2xl font-sans">Notes App</h1>
+      <button
+        class="bg-red-500 px-5 py-2 text-white hover:bg-red-600 active:bg-red-700 focus:ring focus:ring-red-100 rounded"
+        (click)="signOut()"
+      >
+        Sign Out
+      </button>
+    </header>
+    <app-master-password></app-master-password>
+    <ng-container *ngIf="masterPasswordToggle === ''">
+      <div class="flex m-5 gap-5 flex-col-reverse md:flex-row h-max">
+        <div class="border border-neutral-700 rounded p-5 sm:basis-1/4">
+          <app-list-notebooks></app-list-notebooks>
+        </div>
+        <div class="border border-neutral-700 rounded p-5 sm:basis-2/6">
+          <app-list-note></app-list-note>
+        </div>
+
+        <div
+          *ngIf="showAdd || showUpdate"
+          class="border border-neutral-700 h-fit rounded p-5 sm:basis-3/6"
+        >
+          <ng-container *ngIf="showAdd"
+            ><app-add-note></app-add-note
+          ></ng-container>
+
+          <ng-container *ngIf="showUpdate"
+            ><app-update-note></app-update-note
+          ></ng-container>
+        </div>
+      </div>
+    </ng-container>
+  </ng-template>
+</amplify-authenticator>

@@ -1,0 +1,121 @@
+# this is an auto generated file. This will be overwritten
+query GetNotebook($id: ID!) {
+  getNotebook(id: $id) {
+    id
+    title
+    Notes {
+      items {
+        id
+        title
+        description
+        user
+        createdAt
+        updatedAt
+        notebookNotesId
+        owner
+      }
+      nextToken
+    }
+    user
+    createdAt
+    updatedAt
+    owner
+  }
+}
+query ListNotebooks(
+  $filter: ModelNotebookFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listNotebooks(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      title
+      Notes {
+        nextToken
+      }
+      user
+      createdAt
+      updatedAt
+      owner
+    }
+    nextToken
+  }
+}
+query GetNote($id: ID!) {
+  getNote(id: $id) {
+    id
+    title
+    description
+    notebook {
+      id
+      title
+      Notes {
+        nextToken
+      }
+      user
+      createdAt
+      updatedAt
+      owner
+    }
+    user
+    createdAt
+    updatedAt
+    notebookNotesId
+    owner
+  }
+}
+query ListNotes(
+  $filter: ModelNoteFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listNotes(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      title
+      description
+      notebook {
+        id
+        title
+        user
+        createdAt
+        updatedAt
+        owner
+      }
+      user
+      createdAt
+      updatedAt
+      notebookNotesId
+      owner
+    }
+    nextToken
+  }
+}
+query GetUsers($id: ID!) {
+  getUsers(id: $id) {
+    id
+    masterPassword
+    hash
+    createdAt
+    updatedAt
+    owner
+  }
+}
+query ListUsers(
+  $filter: ModelUsersFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      masterPassword
+      hash
+      createdAt
+      updatedAt
+      owner
+    }
+    nextToken
+  }
+}

@@ -1,0 +1,140 @@
+@import "~@aws-amplify/ui-angular/theme.css";
+@tailwind base;
+:root {
+  --primary: #000000;
+  --secondary: #3b82f6;
+  --text-color: #ffffff;
+  --primary-focus: #3b82f6;
+  --amplify-colors-brand-primary-80: #3b82f6;
+  --amplify-colors-background-primary: #ffffff;
+  --amplify-colors-background-secondary: #f2f2f2;
+  --amplify-components-text-error-color: #dc2626;
+  --amplify-colors-border-primary: #131616;
+}
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+
+}
+[data-amplify-authenticator]{
+  margin-top: 150px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 14px;
+  border: 3px solid var(--primary);
+}
+.amplify-label {
+  color: black;
+}
+.amplify-input {
+  color: black;
+}
+.amplify-input:focus {
+  border-color: var(--amplify-colors-brand-primary-80);
+}
+.amplify-heading {
+  color: var(--amplify-colors-brand-primary-80);
+}
+.amplify- .amplify-card--outlined {
+  border-width: 0;
+  border-radius: 1rem;
+}
+
+.amplify-button {
+  background-color: var(--amplify-colors-brand-primary-80);
+  color: var(--text-color);
+}
+
+.amplify-button:active {
+  background-color: var(--amplify-colors-brand-primary-80);
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.amplify-button:focus {
+  background-color: var(--amplify-colors-brand-primary-80);
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.amplify-button:hover {
+  background-color: var(--amplify-colors-brand-primary-80);
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.amplify-button--link {
+  color: var(--amplify-colors-brand-primary-80);
+}
+
+.amplify-button--link:active {
+  color: var(--amplify-colors-brand-primary-80);
+  opacity: 0.9;
+}
+
+.amplify-button--link:focus {
+  color: var(--amplify-colors-brand-primary-80);
+  opacity: 0.9;
+}
+
+.amplify-button--link:hover {
+  color: var(--amplify-colors-brand-primary-80);
+  opacity: 0.8;
+}
+
+.amplify-button--full-width,
+.amplify-button--link {
+  color: var(--amplify-colors-brand-primary-80);
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.amplify-button--full-width,
+.amplify-button--link:active {
+  background-color: var(--primary-focus);
+}
+
+.amplify-button--full-width,
+.amplify-button--link:focus {
+  color: var(--text-color);
+}
+
+.amplify-button--full-width,
+.amplify-button--link:hover {
+  color: var(--text-color);
+}
+
+.amplify-tabs-item {
+  color: var(--amplify-colors-brand-primary-80);
+}
+
+.amplify-tabs-item:active {
+  color: var(--amplify-colors-brand-primary-80);
+  opacity: 0.9;
+}
+
+.amplify-tabs-item:hover {
+  color: var(--amplify-colors-brand-primary-80);
+  opacity: 0.8;
+}
+
+.amplify-tabs-item:focus {
+  color: var(--amplify-colors-brand-primary-80);
+  opacity: 0.8;
+}
+
+@tailwind components;
+@tailwind utilities;
+

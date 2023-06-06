@@ -1,0 +1,196 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateNotebook(
+  $input: CreateNotebookInput!
+  $condition: ModelNotebookConditionInput
+) {
+  createNotebook(input: $input, condition: $condition) {
+    id
+    title
+    Notes {
+      items {
+        id
+        title
+        description
+        user
+        createdAt
+        updatedAt
+        notebookNotesId
+        owner
+      }
+      nextToken
+    }
+    user
+    createdAt
+    updatedAt
+    owner
+  }
+}
+mutation UpdateNotebook(
+  $input: UpdateNotebookInput!
+  $condition: ModelNotebookConditionInput
+) {
+  updateNotebook(input: $input, condition: $condition) {
+    id
+    title
+    Notes {
+      items {
+        id
+        title
+        description
+        user
+        createdAt
+        updatedAt
+        notebookNotesId
+        owner
+      }
+      nextToken
+    }
+    user
+    createdAt
+    updatedAt
+    owner
+  }
+}
+mutation DeleteNotebook(
+  $input: DeleteNotebookInput!
+  $condition: ModelNotebookConditionInput
+) {
+  deleteNotebook(input: $input, condition: $condition) {
+    id
+    title
+    Notes {
+      items {
+        id
+        title
+        description
+        user
+        createdAt
+        updatedAt
+        notebookNotesId
+        owner
+      }
+      nextToken
+    }
+    user
+    createdAt
+    updatedAt
+    owner
+  }
+}
+mutation CreateNote(
+  $input: CreateNoteInput!
+  $condition: ModelNoteConditionInput
+) {
+  createNote(input: $input, condition: $condition) {
+    id
+    title
+    description
+    notebook {
+      id
+      title
+      Notes {
+        nextToken
+      }
+      user
+      createdAt
+      updatedAt
+      owner
+    }
+    user
+    createdAt
+    updatedAt
+    notebookNotesId
+    owner
+  }
+}
+mutation UpdateNote(
+  $input: UpdateNoteInput!
+  $condition: ModelNoteConditionInput
+) {
+  updateNote(input: $input, condition: $condition) {
+    id
+    title
+    description
+    notebook {
+      id
+      title
+      Notes {
+        nextToken
+      }
+      user
+      createdAt
+      updatedAt
+      owner
+    }
+    user
+    createdAt
+    updatedAt
+    notebookNotesId
+    owner
+  }
+}
+mutation DeleteNote(
+  $input: DeleteNoteInput!
+  $condition: ModelNoteConditionInput
+) {
+  deleteNote(input: $input, condition: $condition) {
+    id
+    title
+    description
+    notebook {
+      id
+      title
+      Notes {
+        nextToken
+      }
+      user
+      createdAt
+      updatedAt
+      owner
+    }
+    user
+    createdAt
+    updatedAt
+    notebookNotesId
+    owner
+  }
+}
+mutation CreateUsers(
+  $input: CreateUsersInput!
+  $condition: ModelUsersConditionInput
+) {
+  createUsers(input: $input, condition: $condition) {
+    id
+    masterPassword
+    hash
+    createdAt
+    updatedAt
+    owner
+  }
+}
+mutation UpdateUsers(
+  $input: UpdateUsersInput!
+  $condition: ModelUsersConditionInput
+) {
+  updateUsers(input: $input, condition: $condition) {
+    id
+    masterPassword
+    hash
+    createdAt
+    updatedAt
+    owner
+  }
+}
+mutation DeleteUsers(
+  $input: DeleteUsersInput!
+  $condition: ModelUsersConditionInput
+) {
+  deleteUsers(input: $input, condition: $condition) {
+    id
+    masterPassword
+    hash
+    createdAt
+    updatedAt
+    owner
+  }
+}
